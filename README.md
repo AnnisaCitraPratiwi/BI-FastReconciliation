@@ -6,8 +6,7 @@
 
 Aplikasi web yang dirancang untuk menyederhanakan dan mengotomatiskan proses rekonsiliasi data transaksi harian, dengan fokus pada transaksi [BI-FAST](https://www.bi.go.id/id/layanan/sistem-pembayaran/Pages/BI-FAST.aspx). BI-Fast Reconciliation membantu menghilangkan proses manual yang memakan waktu dan rentan terhadap *human error*.
 
-[![Screenshot Dashboard BLRecons]([GANTI_DENGAN_LINK_SCREENSHOT_DASHBOARD_ANDA.png])
-](https://github.com/AnnisaCitraPratiwi/BI-FastReconciliation/blob/2ca15c7751ecbfcfd75959bd5a4f076945bb421f/Screenshot%20(2424).png)
+![Screenshot Dashboard](Screenshot (2424).png)
 *<p align="center">Tampilan dashboard utama.</p>*
 
 ---
