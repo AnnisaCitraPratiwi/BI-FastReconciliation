@@ -1,66 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# BI-Fast Reconciliation - Aplikasi Rekonsiliasi BI-FAST
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php)
+![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## About Laravel
+Aplikasi web yang dirancang untuk menyederhanakan dan mengotomatiskan proses rekonsiliasi data transaksi harian, dengan fokus pada transaksi [BI-FAST](https://www.bi.go.id/id/layanan/sistem-pembayaran/Pages/BI-FAST.aspx). BI-Fast Reconciliation membantu menghilangkan proses manual yang memakan waktu dan rentan terhadap *human error*.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Screenshot Dashboard BLRecons]([GANTI_DENGAN_LINK_SCREENSHOT_DASHBOARD_ANDA.png])
+](https://github.com/AnnisaCitraPratiwi/BI-FastReconciliation/blob/2ca15c7751ecbfcfd75959bd5a4f076945bb421f/Screenshot%20(2424).png)
+*<p align="center">Tampilan dashboard utama.</p>*
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Fitur Utama
 
-## Learning Laravel
+* **📤 Upload Data Fleksibel**: Unggah data transaksi dari berbagai sumber (misalnya laporan bank dan data internal) dalam format CSV atau Excel.
+* **⚙️ Rekonsiliasi Otomatis**: Mesin rekonsiliasi cerdas yang membandingkan dua set data berdasarkan parameter unik (seperti ID transaksi, nominal, dan tanggal).
+* **⚠️ Deteksi Anomali**: Secara otomatis menemukan dan menandai transaksi yang tidak cocok, hilang, atau memiliki selisih.
+* **🚀 Proses Asynchronous**: Untuk data berukuran besar (ribuan hingga jutaan baris), proses rekonsiliasi akan dijalankan di *background* menggunakan antrian (Queue), sehingga tidak membuat browser *timeout* dan Anda bisa terus bekerja.
+* **📊 Dashboard Interaktif**: Visualisasikan hasil rekonsiliasi, lihat ringkasan data, dan unduh laporan anomali dengan mudah.
+* **🕒 Manajemen Histori**: Semua proses rekonsiliasi yang pernah dilakukan tersimpan dan dapat diakses kembali kapan saja.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Framework**: Laravel 10.x
+* **Bahasa**: PHP 8.2
+* **Database**: MySQL 
+* **Frontend**: Blade, [Bootstrap]
+* **Lainnya**: Laravel Queue (untuk proses background)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 🚀 Instalasi dan Setup
 
-### Premium Partners
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1.  **Clone repository ini:**
+    ```bash
+    git clone [URL_GIT_REPOSITORY_ANDA]
+    cd BLRecons
+    ```
 
-## Contributing
+2.  **Install dependensi Composer:**
+    ```bash
+    composer install
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3.  **Buat file `.env`:**
+    ```bash
+    cp .env.example .env
+    ```
 
-## Code of Conduct
+4.  **Generate application key:**
+    ```bash
+    php artisan key:generate
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5.  **Konfigurasi database di file `.env`:**
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=[NAMA_DATABASE_ANDA]
+    DB_USERNAME=[USERNAME_DATABASE_ANDA]
+    DB_PASSWORD=[PASSWORD_DATABASE_ANDA]
+    ```
 
-## Security Vulnerabilities
+6.  **Konfigurasi koneksi Queue di file `.env`:**
+    *(Direkomendasikan menggunakan `database` atau `redis`)*
+    ```env
+    QUEUE_CONNECTION=database
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7.  **Jalankan migrasi dan seeder database:**
+    ```bash
+    php artisan migrate --seed
+    ```
 
-## License
+8.  **Install dependensi NPM dan compile assets:**
+    ```bash
+    npm install
+    npm run dev
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9.  **Jalankan server pengembangan:**
+    ```bash
+    php artisan serve
+    ```
+
+---
+
+## ⚡ Menjalankan Antrian (Queue Worker)
+
+Karena aplikasi ini memproses data besar di *background*, Anda **wajib** menjalankan *queue worker*. Buka terminal baru dan jalankan perintah berikut:
+
+```bash
+php artisan queue:work
