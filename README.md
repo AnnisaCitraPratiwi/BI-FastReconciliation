@@ -14,11 +14,11 @@ Aplikasi web yang dirancang untuk menyederhanakan dan mengotomatiskan proses rek
 
 ## ✨ Fitur Utama
 
-* **📤 Upload Data Fleksibel**: Unggah data transaksi dari berbagai sumber (misalnya laporan bank dan data internal) dalam format CSV atau Excel.
-* **⚙️ Rekonsiliasi Otomatis**: Mesin rekonsiliasi cerdas yang membandingkan dua set data berdasarkan parameter unik (seperti ID transaksi, nominal, dan tanggal).
+* **📤 Upload Data Fleksibel**: Unggah data transaksi dari 3 sumber dalam format Excel.
+* **⚙️ Rekonsiliasi Otomatis**: logic rekonsiliasi yang membandingkan 3 set data berdasarkan parameter unik dan nominal.
 * **⚠️ Deteksi Anomali**: Secara otomatis menemukan dan menandai transaksi yang tidak cocok, hilang, atau memiliki selisih.
-* **🚀 Proses Asynchronous**: Untuk data berukuran besar (ribuan hingga jutaan baris), proses rekonsiliasi akan dijalankan di *background* menggunakan antrian (Queue), sehingga tidak membuat browser *timeout* dan Anda bisa terus bekerja.
-* **📊 Dashboard Interaktif**: Visualisasikan hasil rekonsiliasi, lihat ringkasan data, dan unduh laporan anomali dengan mudah.
+* **🚀 Proses Asynchronous**: Untuk data berukuran besar (ribuan hingga jutaan baris), proses rekonsiliasi akan dijalankan di *background* menggunakan antrian (Queue), sehingga tidak membuat browser *timeout*.
+* **📊 Dashboard Interaktif**: Visualisasikan hasil rekonsiliasi, lihat ringkasan data anomali harian.
 * **🕒 Manajemen Histori**: Semua proses rekonsiliasi yang pernah dilakukan tersimpan dan dapat diakses kembali kapan saja.
 
 ---
