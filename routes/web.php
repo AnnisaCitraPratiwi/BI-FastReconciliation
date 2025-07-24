@@ -88,7 +88,7 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/reconciliation/process-job', [ReconciliationController::class, 'processJob'])->name('reconciliation.process.job');
             Route::post('/reconciliation/process-direct', [ReconciliationController::class, 'processDirect'])->name('reconciliation.process.direct');
              
-            Route::get('/history', [ReconciliationController::class, 'history'])->name('reconciliation.history');
+            Route::get('//history', [ReconciliationController::class, 'history'])->name('reconciliation.history');
             Route::get('/history/{id}', [ReconciliationController::class, 'viewReconciliationHistory'])->name('reconciliation.history.view');
             Route::get('/history/download/{id}/{type}', [ReconciliationController::class, 'downloadHistoryFile'])->name('reconciliation.history.download');
             Route::get('/history/{id}/view', [ReconciliationController::class, 'viewHistoryDetail'])->name('reconciliation.history.view');
