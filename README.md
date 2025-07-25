@@ -4,7 +4,7 @@
 ![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Aplikasi web yang dirancang untuk menyederhanakan dan mengotomatiskan proses rekonsiliasi data transaksi harian, dengan fokus pada transaksi [BI-FAST](https://www.bi.go.id/id/layanan/sistem-pembayaran/Pages/BI-FAST.aspx). BI-Fast Reconciliation membantu menghilangkan proses manual yang memakan waktu dan rentan terhadap *human error*.
+Aplikasi web yang dirancang untuk menyederhanakan dan mengotomatiskan proses rekonsiliasi data transaksi harian, dengan fokus pada transaksi BI-FAST. BI-Fast Reconciliation membantu menghilangkan proses manual yang memakan waktu dan rentan terhadap *human error*.
 
 ![Screenshot Dashboard](public/assets/images/dashboard-bifast.png)
 *<p align="center">Tampilan dashboard utama.</p>*
@@ -38,8 +38,8 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
 
 1.  **Clone repository ini:**
     ```bash
-    git clone [URL_GIT_REPOSITORY_ANDA]
-    cd BLRecons
+    git clone https://github.com/AnnisaCitraPratiwi/BI-FastReconciliation.git 
+    cd BI-FastReconciliation
     ```
 
 2.  **Install dependensi Composer:**
@@ -57,7 +57,12 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
     php artisan key:generate
     ```
 
-5.  **Konfigurasi database di file `.env`:**
+5.  **Linked Storage:**
+    ```bash
+    php artisan storage:link
+    ```
+    
+6.  **Konfigurasi database di file `.env`:**
     ```env
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -67,21 +72,14 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
     DB_PASSWORD=[PASSWORD_DATABASE_ANDA]
     ```
 
-6.  **Konfigurasi koneksi Queue di file `.env`:**
-    *(Direkomendasikan menggunakan `database` atau `redis`)*
+7.  **Konfigurasi koneksi Queue di file `.env`:** 
     ```env
     QUEUE_CONNECTION=database
     ```
 
-7.  **Jalankan migrasi dan seeder database:**
+8.  **Jalankan migrasi dan seeder database:**
     ```bash
     php artisan migrate --seed
-    ```
-
-8.  **Install dependensi NPM dan compile assets:**
-    ```bash
-    npm install
-    npm run dev
     ```
 
 9.  **Jalankan server pengembangan:**
